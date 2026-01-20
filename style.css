@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    opacity: 1;
+    animation: fade-in 0.5s ease;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.nav {
+    position: relative;
+}
+
+.nav::after {
+    content: "";
+    height: 1px;
+    width: 0px;
+    background: #38BDF8;
+    position: absolute;
+    top: 100%;
+    left: -5%;
+    transition: width 0.3s ease, transform 0.4s ease;
+}
+
+.nav:hover::after {
+    width: 110%;
+}
+
+.nav:hover {
+    transform: scale(1.10);
+    
+}
+
+h1>span{position: relative;}
+
+h1>span::after{ content: "";
+    height: 2px;
+    width: 95%;
+    background: #38BDF8;
+    position: absolute;
+    top: 105%;
+    left: 0;}
